@@ -51,17 +51,25 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-quantum': 'var(--gradient-quantum)',
+				'gradient-void': 'var(--gradient-void)',
+				'gradient-neural': 'var(--gradient-neural)',
+				'gradient-hologram': 'var(--gradient-hologram)'
+			},
+			boxShadow: {
+				'quantum': 'var(--shadow-quantum)',
+				'neural': 'var(--shadow-neural)',
+				'void': 'var(--shadow-void)'
+			},
+			transitionTimingFunction: {
+				'quantum': 'var(--transition-quantum)'
+			},
+			fontFamily: {
+				'orbitron': ['Orbitron', 'sans-serif'],
+				'cyber': ['Share Tech Mono', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,57 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'quantum-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
+				},
+				'matrix-rain': {
+					'0%': {
+						transform: 'translateY(-100%)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '1'
+					},
+					'90%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(100vh)',
+						opacity: '0'
+					}
+				},
+				'hologram-flicker': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
+				},
+				'neural-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(45 100% 60% / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(45 100% 60% / 0.6)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'quantum-pulse': 'quantum-pulse 2s ease-in-out infinite',
+				'matrix-rain': 'matrix-rain 3s linear infinite',
+				'hologram-flicker': 'hologram-flicker 0.1s ease-in-out infinite',
+				'neural-glow': 'neural-glow 2s ease-in-out infinite'
 			}
 		}
 	},
